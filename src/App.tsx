@@ -322,7 +322,7 @@ function App() {
           <div className="container mx-auto px-4 h-full py-12">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-8 h-full">
               {/* Contenido izquierdo con animación */}
-              <div className="text-white lg:max-w-xl animate-fade-in-up">
+              <div className="text-white mt-14 md:mt-12 lg:max-w-xl animate-fade-in-up">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 animate-slide-in-left font-lora">
                   Bienvenidos a Casa Australis
                 </h1>
