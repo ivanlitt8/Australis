@@ -79,15 +79,15 @@ function App() {
   ];
 
   const galleryImages = [
-    "https://i.ibb.co/qJRy4Q9/Captura-de-pantalla-2025-01-25-223702.png",
-    "https://i.ibb.co/CVXXNXL/IMG-20250113-WA0001.jpg",
-    "https://i.ibb.co/Y2TcJnb/IMG-20250113-WA0009.jpg",
-    "https://i.ibb.co/C858jt0/IMG-20250113-WA0008.jpg",
-    "https://i.ibb.co/C0bNttf/IMG-20250113-WA0007.jpg",
-    "https://i.ibb.co/G5PMkKV/IMG-20250113-WA0015.jpg",
-    "https://i.ibb.co/2sjSK4t/c3cc6879-66f1-4c38-b625-ff1a6ffd33ce.jpg",
-    "https://i.ibb.co/9TJKWJP/Cascada-Corbata-Blanca-El-Hoyo-Chubut.jpg",
-    "https://i.ibb.co/W0tgfFx/Puerto-Patriada-Chubut.jpg",
+    "https://gojhvtutffyokemxtdmx.supabase.co/storage/v1/object/public/australis//IMG-20250315-WA0009.jpg",
+    "https://gojhvtutffyokemxtdmx.supabase.co/storage/v1/object/public/australis//IMG-20250315-WA0010.jpg",
+    "https://gojhvtutffyokemxtdmx.supabase.co/storage/v1/object/public/australis//IMG-20250315-WA0013.jpg",
+    "https://gojhvtutffyokemxtdmx.supabase.co/storage/v1/object/public/australis//IMG-20250315-WA0014.jpg",
+    "https://gojhvtutffyokemxtdmx.supabase.co/storage/v1/object/public/australis//IMG-20250315-WA0016.jpg",
+    "https://gojhvtutffyokemxtdmx.supabase.co/storage/v1/object/public/australis//IMG-20250315-WA0018.jpg",
+    "https://gojhvtutffyokemxtdmx.supabase.co/storage/v1/object/public/australis//IMG-20250315-WA0019.jpg",
+    "https://gojhvtutffyokemxtdmx.supabase.co/storage/v1/object/public/australis//IMG-20250315-WA0022.jpg",
+    "https://gojhvtutffyokemxtdmx.supabase.co/storage/v1/object/public/australis//Elhoyo.jpg",
   ];
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -225,7 +225,7 @@ function App() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-white bg-opacity-90 shadow-md">
         <div className="container mx-auto px-4 py-2 flex justify-between items-center">
           <img
-            src="https://i.ibb.co/5hNXj4M/Sin-t-tulo-removebg-preview.png"
+            src="https://gojhvtutffyokemxtdmx.supabase.co/storage/v1/object/public/australis//Verde_bonito-removebg-preview.png"
             alt="Casa Australis Logo"
             className="h-16 w-auto"
           ></img>
@@ -290,7 +290,7 @@ function App() {
             <nav className="absolute left-0 top-0 w-64 h-full bg-white shadow-lg transform transition-transform duration-300 ease-in-out">
               <div className="p-4">
                 <img
-                  src="https://i.ibb.co/5hNXj4M/Sin-t-tulo-removebg-preview.png"
+                  src="https://gojhvtutffyokemxtdmx.supabase.co/storage/v1/object/public/australis//Verde_bonito-removebg-preview.png"
                   alt="Casa Australis Logo"
                   className="h-16 w-auto mb-8"
                 />
@@ -314,7 +314,7 @@ function App() {
 
       <section className="relative min-h-screen pt-16">
         <img
-          src="https://i.ibb.co/CVXXNXL/IMG-20250113-WA0001.jpg"
+          src="https://gojhvtutffyokemxtdmx.supabase.co/storage/v1/object/public/australis//background.jpg"
           className="absolute inset-0 w-full h-full object-cover"
           alt="Casa Australis"
         />
@@ -364,47 +364,48 @@ function App() {
               </div>
 
               {/* Formulario - visible en desktop, oculto en mobile */}
-              <div className="hidden lg:block bg-white bg-opacity-90 rounded-lg shadow-xl p-6 w-full max-w-md animate-fade-in-up delay-300">
+              <div className="hidden mt-20 lg:block bg-white bg-opacity-90 rounded-lg shadow-xl p-6 w-full max-w-md animate-fade-in-up delay-300">
                 <h2 className="text-2xl font-bold text-[#3A6B8D] mb-4">
                   Consulta disponibilidad
                 </h2>
                 <form onSubmit={handleSubmit} className="space-y-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Nombre *
-                    </label>
-                    <input
-                      type="text"
-                      name="nombre"
-                      value={formData.nombre}
-                      onChange={handleInputChange}
-                      className="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-500"
-                    />
-                    {errors.nombre && (
-                      <p className="text-red-500 text-sm mt-1">
-                        {errors.nombre}
-                      </p>
-                    )}
-                  </div>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Nombre *
+                      </label>
+                      <input
+                        type="text"
+                        name="nombre"
+                        value={formData.nombre}
+                        onChange={handleInputChange}
+                        className="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-500"
+                      />
+                      {errors.nombre && (
+                        <p className="text-red-500 text-sm mt-1">
+                          {errors.nombre}
+                        </p>
+                      )}
+                    </div>
 
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Apellido *
-                    </label>
-                    <input
-                      type="text"
-                      name="apellido"
-                      value={formData.apellido}
-                      onChange={handleInputChange}
-                      className="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-500"
-                    />
-                    {errors.apellido && (
-                      <p className="text-red-500 text-sm mt-1">
-                        {errors.apellido}
-                      </p>
-                    )}
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Apellido *
+                      </label>
+                      <input
+                        type="text"
+                        name="apellido"
+                        value={formData.apellido}
+                        onChange={handleInputChange}
+                        className="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-500"
+                      />
+                      {errors.apellido && (
+                        <p className="text-red-500 text-sm mt-1">
+                          {errors.apellido}
+                        </p>
+                      )}
+                    </div>
                   </div>
-
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
                       Email *
@@ -651,7 +652,7 @@ function App() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
               <img
-                src="https://i.ibb.co/9TJKWJP/Cascada-Corbata-Blanca-El-Hoyo-Chubut.jpg"
+                src="https://gojhvtutffyokemxtdmx.supabase.co/storage/v1/object/public/australis//corbata_blanca.jpeg"
                 alt="Paisaje de la Comarca Andina"
                 className="rounded-lg shadow-lg"
               />
